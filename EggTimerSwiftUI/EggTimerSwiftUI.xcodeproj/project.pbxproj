@@ -14,6 +14,7 @@
 		EDE23CE829A22612008259CC /* EggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE23CE729A22612008259CC /* EggView.swift */; };
 		EDE23CEC29A24FA4008259CC /* ProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE23CEB29A24FA4008259CC /* ProgressViewStyle.swift */; };
 		EDE23CEE29A2743D008259CC /* ProgressFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE23CED29A2743D008259CC /* ProgressFooterView.swift */; };
+		EDE23CF629A2F274008259CC /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EDE23CF529A2F274008259CC /* alarm_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		EDE23CE729A22612008259CC /* EggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggView.swift; sourceTree = "<group>"; };
 		EDE23CEB29A24FA4008259CC /* ProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyle.swift; sourceTree = "<group>"; };
 		EDE23CED29A2743D008259CC /* ProgressFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressFooterView.swift; sourceTree = "<group>"; };
+		EDE23CF529A2F274008259CC /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		EDE23CD829A22414008259CC /* EggTimerSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				EDE23CF429A2F1FB008259CC /* Sound */,
 				EDE23CDB29A22414008259CC /* ContentView.swift */,
 				EDE23CE729A22612008259CC /* EggView.swift */,
 				EDE23CED29A2743D008259CC /* ProgressFooterView.swift */,
@@ -74,6 +77,14 @@
 				EDE23CE029A22415008259CC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDE23CF429A2F1FB008259CC /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				EDE23CF529A2F274008259CC /* alarm_sound.mp3 */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE23CE129A22415008259CC /* Preview Assets.xcassets in Resources */,
+				EDE23CF629A2F274008259CC /* alarm_sound.mp3 in Resources */,
 				EDE23CDE29A22415008259CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

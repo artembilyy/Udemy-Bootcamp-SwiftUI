@@ -5,6 +5,7 @@
 //  Created by Artem Bilyi on 19.02.2023.
 //
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
 
@@ -12,7 +13,9 @@ struct ContentView: View {
     @State private var totalTime = 0.0
     @State private var secondsPassed = 0.0
     @State private var isTimerRunning = false
+    
     @State private var timer: Timer?
+    @State private var player: AVAudioPlayer?
     var body: some View {
         ZStack {
             Color.teal
@@ -65,6 +68,9 @@ struct ContentView: View {
             } else {
                 timer.invalidate()
                 reset()
+                let url = Bundle.main.url(forResource: "alarm_sound", withExtension: "mp3")
+                player = try! AVAudioPlayer(contentsOf: url!)
+                player?.play()
             }
         }
     }
