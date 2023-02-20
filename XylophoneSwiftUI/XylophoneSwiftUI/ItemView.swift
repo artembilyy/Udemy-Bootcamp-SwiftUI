@@ -20,14 +20,19 @@ struct ItemView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(color)
+                .foregroundColor(.clear)
+                .overlay(
+                    Rectangle()
+                        .foregroundColor(color)
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                )
                 .padding(.leading, padding)
                 .padding(.trailing, padding)
                 .opacity(isTapped ? 0.5 : 1)
                 .onTapGesture {
                     isTapped = true
                     playSound(soundName: character)
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         isTapped = false
                     }
                 }
@@ -46,8 +51,6 @@ struct ItemView: View {
 
 struct ItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemView(color: .pink, character: "A", padding: 0)
+        ItemView(color: .pink, character: "A", padding: 15)
     }
 }
-
-
